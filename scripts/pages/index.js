@@ -43,6 +43,12 @@
         const { photographers } = await getPhotographers();
         displayData(photographers);
     };
+
+    // Création du lien de chaque photographe
+    const buttons = document.querySelectorAll(".profil")
+    console.log(buttons);
+
+
     
     init();
     
