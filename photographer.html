@@ -21,7 +21,7 @@
 				<div class="photograph-header--data" tabindex="0">
 
 				</div>
-				<button class="contact_button" onclick="launchModal()"  aria-haspopup="contact_modal" >Contactez-moi</button>
+				<button class="contact_button" onclick="displayModal()"  aria-haspopup="contact_modal" >Contactez-moi</button>
 				<div class="photograph-header--photo">
 
 				</div>
@@ -39,39 +39,8 @@
 				<div class="photograph-works--articles" tabindex="0" aria-label="Liste des medias du photographe"></div>
 
 			</div>
-		</main>
-		<!----------------------  lightBoxn template/code a voir--------------------------->
-		<!-- <div id="carrousel" role="dialog" aria-hidden="true">
-			<div class="carrousel-content">
-				<div id="left"> -->
-					<!--<i class="fa-solid fa-angle-left "  id="prev" role="link" aria-label="media précedente" tabindex="0"></i>-->
-					<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="prev" role="link" aria-label="media précédant" tabindex="0">
-						<path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
-					</svg>
-					
-				</div>
-				<div id="center" >
-
-				</div>
-				<div id="right">   -->
-					
-					<!--<i class="fa-solid fa-xmark" id="closeLightBox" role="button" aria-label="fermer la boite de dialogue" tabindex="0"></i>-->
-					<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="closeLightBox" role="button" aria-label="fermer la boite de dialogue" tabindex="0">
-						<path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
-					</svg> -->
-					
-					<!--<i class="fa-solid fa-angle-right"  id="next" role="link" aria-label="media suivante" tabindex="0"></i>-->
-					<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="next" role="link" aria-label="media suivant" tabindex="0">
-						<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
-					</svg>
-					
-				</div>
-
-			</div>
-		</div> -->
-		<!-- fenetre modal-->
+				<!-- fenetre modal-->
 		<div id="contact_modal" role="dialog" aria-hidden="true" aria-modal="true" aria-labelledby="modalTitle">
-			<div class="backdrop" id="backdrop"></div> 
 			<div class="modal">
 				<header >
 					<h2 tabindex="0" id="modalTitle">Contactez - moi <span id="photographerName"></span></h2>
@@ -92,27 +61,53 @@
 					</div>
 					<div>
 						<label for="message">Votre message</label>
-						<textarea id="message"  aria-required="true" required tabindex="0"></textarea>
+						<textarea id="message" cols="70" rows="3"  aria-required="true" required tabindex="0"></textarea>
 					</div>
 					
 					<button class="contact_button submit" >Envoyer</button>
 				</form>
-				<input
-            class="btn-close"
-            type="button"
-            value="Fermer"
-            />
 			</div>
 		</div>
+		</main>
+		<!----------------------  lightBoxn template/code a voir--------------------------->
+		<div id="carrousel" role="dialog" aria-hidden="true">
+			<div class="carrousel-content">
+				<div id="left">
+					<!-- <i class="fa-solid fa-angle-left "  id="prev" role="link" aria-label="media précedente" tabindex="0"></i>-->
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="prev" role="link" aria-label="media précédant" tabindex="0">
+						<path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+					</svg>
+					
+				</div>
+				<div id="center" >
+
+				</div>
+				<div id="right">
+					
+					<!-- <i class="fa-solid fa-xmark" id="closeLightBox" role="button" aria-label="fermer la boite de dialogue" tabindex="0"></i>-->
+					 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="closeLightBox" role="button" aria-label="fermer la boite de dialogue" tabindex="0">
+						<path d="M310.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L160 210.7 54.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L114.7 256 9.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 301.3 265.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L205.3 256 310.6 150.6z"/>
+					</svg>
+					
+					<!-- <i class="fa-solid fa-angle-right"  id="next" role="link" aria-label="media suivante" tabindex="0"></i>-->
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="next" role="link" aria-label="media suivant" tabindex="0">
+						<path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+					</svg>
+					
+				</div>
+
+			</div>
+		</div>
+	
 		<footer>
 			<span class="somme-likes" tabindex="0"></span>
 			<span class="photographer-price" ></span>
 		</footer>
 		<!-- <script src="/scripts/utils/lightBox.js"></script>
 		<script src="/scripts/utils/filters.js"></script>
-		<script src="/scripts/utils/likesum.js"></script>-->
-		<script type="module" src="/scripts/pages/photographer.js" ></script>
-		<script src="/scripts/utils/contactForm.js"></script>
+		<script src="/scripts/utils/like.js"></script>-->
+		<script type="module" src="scripts/pages/photographer.js" ></script>
+		<script src="scripts/utils/modal.js"></script>
 
 	</body>
 </html>

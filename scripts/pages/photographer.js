@@ -1,4 +1,7 @@
 import { getPhotographerMedias } from "../factories/medias.js";
+import { mediasFilter } from "../utils/filters.js";
+import { sommeLikes } from "../utils/like.js";
+import { displayCarrousel } from "../utils/lightBox.js";
 
 
 //Recupère les données du JSON
@@ -75,9 +78,9 @@ async function getDataPhotographer(){
 		getPhotographerMedias(ele,photograph);
 	});
 
-	/*mediasFilter(photographerMedias,photograph); 
+	mediasFilter(photographerMedias,photograph); 
 	sommeLikes(photographerMedias,photograph);
-	displayCarrousel();*/
+	displayCarrousel();
     
 
 }

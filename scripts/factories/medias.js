@@ -22,7 +22,7 @@
 		if (image){
 			//creer l'image
 			mediap = document.createElement("img");
-			mediap.src = `assets/images/${name[0]}/${image}`;
+			mediap.src = `assets/images/${name[0]}/small/${image}`;
 			mediap.alt = `${title} photo`;
         
 		}else if(video){
@@ -32,7 +32,7 @@
 			videoTitle.id ="videoTitle";
 			videoTitle.innerText = title;
 			mediap = document.createElement("video");
-			mediap.setAttribute("controls","");
+			
 			mediap.setAttribute("aria-labelledby","videoTitle");
 			mediap.append(videoTitle);
 			mediap.poster = `assets/images/${name[0]}/${poster}.png`;
