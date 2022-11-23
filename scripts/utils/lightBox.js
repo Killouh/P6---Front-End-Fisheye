@@ -21,7 +21,7 @@ export function displayCarrousel() {
     
     ele.addEventListener("click", function (e) {
       e.preventDefault();
-      openLightBox(id[index]) ;
+      openLightBox(index);
       carrousel.innerHTML = "";
       const mediaClone = ele.cloneNode(true);
       if (mediaClone.firstChild.nodeName === "VIDEO") {
@@ -32,13 +32,16 @@ export function displayCarrousel() {
       carrousel.append(mediaCloneTitle);
 
 
-      // Afficher media précedent A REFAIRE !!!!!!
+      // Afficher media précédent et suivant
       function changeDirection (direction) {
-        //this selects either next or prev button and set's the index
-        index += (direction === 'next' ? 1: -1);
-        if (index === id.length) {index = 0}
-        else if (index < 0) {index = id.length -1}
-        openLightBox(id[index]) 
+        index += (direction === 'next' ? 1 : -1);
+        if (index < 0) {
+          index = id.length - 1;
+        }
+        else if (index === id.length) {
+          index = 0;
+        }
+        openLightBox(id[index]);
       }
 
       
@@ -99,19 +102,8 @@ export function displayCarrousel() {
           openLightBox();
         }
       });
-      addEventListener('keydown', (e) => {
-        if (lightBox.style.display && lightBox.style.display !== 'none') {
-          if (e.id === 'prev') {
-            return changeDirection('prev')
-          }
-          if (e.id === 'next') {
-            return changeDirection('next')
-          }
-          if (e.code === 'Escape') {
-            return close()
-          }
-        }
-      })
+      prevBtn.addEventListener("click", changeDirection('prev'));
+      nextBtn.addEventListener("click", changeDirection('next'));
     });
   });
 
