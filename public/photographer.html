@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+
+
+  <title>Fisheye - photographe | formulaire</title>
+</head>
+
+<body>
+  <header>
+    <a href="../index.html" aria-label="Fisheye, retour à la page d'accueil">
+      <img src="assets/images/logo.png" class="logo" alt="logo Fisheye" />
+    </a>
+  </header>
+  <main id="main">
+    <div class="photograph-header">
+      <div class="box__btn">
+        <button class="contact_button" onclick="displayModal()"
+          aria-label="Formulaire de contact">Contactez-moi</button>
+      </div>
+    </div>
+    <!-- media -->
+
+  </main>
+  <!-- modale Lightbox -->
+  <div id="lightbox" aria-hidden="true">
+
+  </div>
+
+  <!-- modale formulaire -->
+  <div id="contact_modal" role="dialog">
+    <div class="modal">
+      <header>
+        <h2 class="contact_modal-title">Contactez-moi</h2>
+        <button onclick="closeModal()" tabindex="0" class="contact_modal-close" aria-label="fermeture de la modale"><img
+            src="assets/icons/close.svg" alt="Fermeture de la modale" aria-hidden="false" /></button>
+      </header>
+      <form>
+        <div class="form-inputs">
+          <label for="prenom">Prénom</label>
+          <input id="prenom" name="prenom" />
+          <span class="form__error"></span>
+        </div>
+
+        <div class="form-inputs">
+          <label for="nom">Nom</label>
+          <input id="nom" name="nom" />
+          <span class="form__error"></span>
+        </div>
+
+        <div class="form-inputs">
+          <label for="email">Email</label>
+          <input id="email" name="email" />
+          <span class="form__error"></span>
+        </div>
+
+        <div class="form-inputs">
+          <label for="message">Votre message</label>
+          <textarea id="message" name="message" placeholder="Écrivez votre message" cols="30" rows="5"></textarea>
+          <span class="form__error"></span>
+        </div>
+
+        <button class="contact_button" aria-label="Envoyer le formulaire" type="submit">Envoyer</button>
+      </form>
+    </div>
+  </div>
+  <!-- Entrer page photographe -->
+  <script type="module" src="../src/pages/photographer.js"></script>
+  <!-- modale du formulaire -->
+  <script src="../src/utils/modale.js"></script>
+  <script src="/src/utils/formulaire.js"></script>
+
+
+
+
+</body>
+
+</html>

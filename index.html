@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link href="css/style.css" rel="stylesheet" type="text/css" lang="fr" xml:lang="fr"/>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <title>Fisheye</title>
-  </head>
-  <body>
-    <header>
-        <img src="assets/images/logo.png" class="logo" alt="Homepage Logo" aria-label="Homepage button"/>
-        <h1>Nos photographes</h1>
-    </header>
-    <main id="main" aria-label="main menu">
-        <div class="photographer_section"></div>
-    </main>
-    <script src="./scripts/factories/photographer.js"></script>
-    <script src="./scripts/pages/index.js"></script>
-  </body>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./public/css/normalize.css" type="text/css" />
+  <link href="./public/css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" href="./public/assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+
+  <title lang="en">Fisheye</title>
+</head>
+
+<body>
+  <header role="banner">
+
+    <a href="#" aria-label="Fisheye, page d'accueil">
+      <img src="./public/assets/images/logo.png" class="logo" alt="logo du site" />
+    </a>
+    <h1 role="heading">Nos photographes</h1>
+  </header>
+  <main id="main" role="main">
+    <div class="photographer_section"></div>
+  </main>
+
+  <script type="module" src="./src/pages/index.js"></script>
+
+</body>
+
 </html>

@@ -8,7 +8,6 @@
 			"tagline": "Voir le beau dans le quotidien",
 			"price": 400,
 			"portrait": "MimiKeel.jpg"
-
 		},
 		{
 			"name": "Ellie-Rose Wilkens",
@@ -18,7 +17,6 @@
 			"tagline": "Capturer des compositions complexes",
 			"price": 250,
 			"portrait": "EllieRoseWilkens.jpg"
-
 		},
 		{
 			"name": "Tracy Galindo",
@@ -28,7 +26,6 @@
 			"tagline": "Photographe freelance",
 			"price": 500,
 			"portrait": "TracyGalindo.jpg"
-
 		},
 		{
 			"name": "Nabeel Bradford",
@@ -47,7 +44,6 @@
 			"tagline": "Je crée des souvenirs",
 			"price": 275,
 			"portrait": "RhodeDubois.jpg"
-
 		},
 		{
 			"name": "Marcel Nikolic",
@@ -57,7 +53,6 @@
 			"tagline": "Toujours à la recherche de LA photo",
 			"price": 300,
 			"portrait": "MarcelNikolic.jpg"
-
 		}
 	],
 	"media": [
