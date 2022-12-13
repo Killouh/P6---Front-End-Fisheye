@@ -21,7 +21,7 @@ class LightboxFactory {
     document.addEventListener("keyup", this.onKeyUp);
     document.addEventListener("keyup", this.onKeyUp);
 
-    
+
   }
 
   /**
@@ -174,8 +174,42 @@ class LightboxFactory {
     this.boxContentMedia.appendChild(containerBox);
     this.boxContentMedia.appendChild(lbTitle);
 
-    
+    const main = document.querySelector("main");
+    const modal = document.getElementById("lightbox");
+    const header = document.querySelector("header");
+
+    let focusedElementBeforeModal;
+
+    // eslint-disable-next-line no-unused-vars
+    focusedElementBeforeModal = document.activeElement;
+
+    modal.ariaHidden = false;
+    header.ariaHidden = true;
+    main.ariaHidden = true;
+
+    let focusableElements = modal.querySelectorAll("button");
+    console.log(focusableElements)
+    focusableElements = Array.prototype.slice.call(focusableElements);
+    let firstElement = focusableElements[0];
+    console.log(firstElement)
+    let lastElement = focusableElements[focusableElements.length - 1];
+    firstElement.focus();
+    modal.addEventListener("keydown", trapTabKey);
+    function trapTabKey(e) {
+      if (e.key === "Tab") {
+        if (document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+
+      }
+    }
+    document.getElementById("right").focus();
+
+
   }
+
+
 
   /**
    * @returns HTMLElement
@@ -200,11 +234,13 @@ class LightboxFactory {
     this.boxContentMedia.id = this.getCurrentId();
 
     btnLeft.classList.add("lightbox-btn", "left");
+    btnLeft.setAttribute("id","left")
     btnLeft.setAttribute("tabindex", "0");
     btnLeft.setAttribute("aria-label", "média précédent");
     btnLeft.addEventListener("click", this.prevMedia.bind(this));
 
     btnRight.classList.add("lightbox-btn", "right");
+    btnRight.setAttribute("id","right")
     btnRight.setAttribute("tabindex", "0");
     btnRight.setAttribute("aria-label", "média suivant");
     btnRight.addEventListener("click", this.nextMedia.bind(this));
@@ -214,6 +250,7 @@ class LightboxFactory {
     spanRightIcon.classList.add("fa", "fa-angle-right");
 
     btnClose.classList.add("lightbox-btn", "close");
+    btnClose.setAttribute("id","close")
     btnClose.setAttribute("tabindex", "0");
     btnClose.setAttribute("aria-label", "Bouton de fermeture");
 
@@ -222,6 +259,9 @@ class LightboxFactory {
 
     contentMedia.classList.add("ligthbox__container-box");
     contentMedia.appendChild(this.typeMedia);
+
+
+
 
     // DOM
     this.boxContentMedia.appendChild(contentMedia);
@@ -240,9 +280,11 @@ class LightboxFactory {
       .querySelector(".lightbox-btn.close")
       .addEventListener("click", this.closeLb.bind(this));
 
-      
+
 
     return div;
   }
+
+
 }
 export { LightboxFactory };
