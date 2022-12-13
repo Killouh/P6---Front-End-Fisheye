@@ -11,9 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/Killouh/P6---Front-End-Fisheye.git"
   },
-  "gitHooks": {
-    "pre-push": "npm run lint"
-  },
   "author": "",
   "license": "ISC",
   "bugs": {
