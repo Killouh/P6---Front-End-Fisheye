@@ -235,6 +235,7 @@ class Photographer {
     this.displaySortFilter();
     this.displayMedia();
     this.displayLightbox();
+    
   }
 }
 const user = new Photographer();

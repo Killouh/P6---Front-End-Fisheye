@@ -191,7 +191,6 @@ class LightboxFactory {
     console.log(focusableElements)
     focusableElements = Array.prototype.slice.call(focusableElements);
     let firstElement = focusableElements[0];
-    console.log(firstElement)
     let lastElement = focusableElements[focusableElements.length - 1];
     firstElement.focus();
     modal.addEventListener("keydown", trapTabKey);
@@ -279,6 +278,7 @@ class LightboxFactory {
     div
       .querySelector(".lightbox-btn.close")
       .addEventListener("click", this.closeLb.bind(this));
+
 
 
 
