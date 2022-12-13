@@ -20,6 +20,8 @@ class LightboxFactory {
     document.addEventListener("keyup", this.onKeyUp);
     document.addEventListener("keyup", this.onKeyUp);
     document.addEventListener("keyup", this.onKeyUp);
+
+    
   }
 
   /**
@@ -171,6 +173,8 @@ class LightboxFactory {
     containerBox.appendChild(this.typeMedia);
     this.boxContentMedia.appendChild(containerBox);
     this.boxContentMedia.appendChild(lbTitle);
+
+    
   }
 
   /**
@@ -235,6 +239,8 @@ class LightboxFactory {
     div
       .querySelector(".lightbox-btn.close")
       .addEventListener("click", this.closeLb.bind(this));
+
+      
 
     return div;
   }

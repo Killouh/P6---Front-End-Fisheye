@@ -139,18 +139,21 @@ class Photographer {
 
     switch (evt.target.value) {
       case "popularite":
+        // eslint-disable-next-line no-case-declarations
         const sortedMediaByPop = getDataByPop(this.getDatas());
         this.setDatas(sortedMediaByPop);
         this.getNewRenderedMedia(sortedMediaByPop);
         this.displayLightbox();
         break;
       case "titre":
+        // eslint-disable-next-line no-case-declarations
         const sortedMediaByTitle = getDataByTitle(this.getDatas());
         this.setDatas(sortedMediaByTitle);
         this.getNewRenderedMedia(sortedMediaByTitle);
         this.displayLightbox();
         break;
       case "date":
+        // eslint-disable-next-line no-case-declarations
         const sortedMediaByDate = getDataByDate(this.getDatas());
         this.setDatas(sortedMediaByDate);
         this.getNewRenderedMedia(sortedMediaByDate);
@@ -176,8 +179,14 @@ class Photographer {
     });
 
     document.querySelector("button.lightbox-btn.close");
+
     return lightbox.appendChild(divDom);
   }
+
+ 
+    
+
+  
 
   /**
    * @param {KeyboardEvent} evt
