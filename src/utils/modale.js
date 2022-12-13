@@ -32,6 +32,7 @@ function displayModal() {
 }
 
 // Fermer la modal
+// eslint-disable-next-line no-unused-vars
 function closeModal() {
   modal.style.display = "none";
   modal.ariaHidden = true;

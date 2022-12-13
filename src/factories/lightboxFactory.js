@@ -120,10 +120,12 @@ class LightboxFactory {
       this.setCurrentMedia(this.datas[0]);
       this.typeMedia = new TypeMediaFactory(this.getCurrentMedia());
       this.onLoad();
+      this.trapTab();
     } else {
       this.setCurrentMedia(this.datas[currentMediaId + 1]);
       this.typeMedia = new TypeMediaFactory(this.getCurrentMedia());
       this.onLoad();
+      this.trapTab();
     }
     document.removeEventListener("keyup", this.navToRight);
   }
@@ -151,10 +153,12 @@ class LightboxFactory {
       this.setCurrentMedia(this.datas[i]);
       this.typeMedia = new TypeMediaFactory(this.getCurrentMedia());
       this.onLoad();
+      this.trapTab();
     } else {
       this.setCurrentMedia(this.datas[currentMediaId - 1]);
       this.typeMedia = new TypeMediaFactory(this.getCurrentMedia());
       this.onLoad();
+      this.trapTab();
     }
     document.removeEventListener("keyup", this.navToLeft);
   }
@@ -174,21 +178,17 @@ class LightboxFactory {
     this.boxContentMedia.appendChild(containerBox);
     this.boxContentMedia.appendChild(lbTitle);
 
-    const main = document.querySelector("main");
+
+ 
+
+  }
+
+  //* Traptab lightbox
+  trapTab() {
     const modal = document.getElementById("lightbox");
-    const header = document.querySelector("header");
 
-    let focusedElementBeforeModal;
-
-    // eslint-disable-next-line no-unused-vars
-    focusedElementBeforeModal = document.activeElement;
-
-    modal.ariaHidden = false;
-    header.ariaHidden = true;
-    main.ariaHidden = true;
 
     let focusableElements = modal.querySelectorAll("button");
-    console.log(focusableElements)
     focusableElements = Array.prototype.slice.call(focusableElements);
     let firstElement = focusableElements[0];
     let lastElement = focusableElements[focusableElements.length - 1];
@@ -204,8 +204,6 @@ class LightboxFactory {
       }
     }
     document.getElementById("right").focus();
-
-
   }
 
 
@@ -258,6 +256,8 @@ class LightboxFactory {
 
     contentMedia.classList.add("ligthbox__container-box");
     contentMedia.appendChild(this.typeMedia);
+
+    
 
 
 

@@ -218,9 +218,13 @@ class Photographer {
     divDom.appendChild(
       new LightboxFactory(currentId, object, this.getDatas()).getLightboxDOM()
     );
+  
+
 
     document.removeEventListener("click", this.getDataForLightbox.bind(this));
     document.removeEventListener("keyup", this.getDataForLightboxKb.bind(this));
+
+    
   }
 
   async init() {

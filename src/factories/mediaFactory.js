@@ -47,6 +47,7 @@ class MediaFactory {
     modal.classList.add("active");
     modal.setAttribute("aria-hidden", "false");
     modal.style.display = "block";
+    
 
     // accessibilité
     document

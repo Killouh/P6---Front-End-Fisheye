@@ -9,6 +9,7 @@ export class TypeMediaFactory {
    */
   constructor(media) {
     // je regarde si la bonne propriété existe
+    // eslint-disable-next-line no-prototype-builtins
     if (media.hasOwnProperty("image")) {
       return new Image(
         media.image,
@@ -16,6 +17,7 @@ export class TypeMediaFactory {
         media.id,
         media.title
       ).displayImage();
+    // eslint-disable-next-line no-prototype-builtins
     } else if (media.hasOwnProperty("video")) {
       return new Video(media.video, media.id, media.title).displayVideo();
     } else {
