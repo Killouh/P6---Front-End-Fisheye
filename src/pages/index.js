@@ -4,6 +4,7 @@ import { PhotographerFactory } from "../factories/photographerFactory.js";
 class App {
   constructor() {
     this.getAllPhotographers = new Api("../../data/photographers.json");
+    this.getAllPhotographers = new Api("https://killouh.github.io/P6---Front-End-Fisheye/data/photographers.json");
     this.photographersSection = document.querySelector(".photographer_section");
   }
   /**
