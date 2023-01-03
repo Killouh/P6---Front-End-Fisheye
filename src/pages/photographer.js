@@ -14,7 +14,7 @@ import {
 
 class Photographer {
   constructor() {
-    this.photographers = new Api("../../data/photographers.json");
+    this.photographers = new Api("https://killouh.github.io/P6---Front-End-Fisheye/data/photographers.json");
     this.id = this.extractUrlParam();
     this.mediaContainer = document.createElement("div");
     this.section = document.createElement("section");

@@ -19,7 +19,7 @@ class PhotographerFactory {
    * @returns {HTMLElement}
    */
   getUserCardDOM() {
-    const baseUrl = "../../public/photographer.html";
+    const baseUrl = "https://killouh.github.io/P6---Front-End-Fisheye/public/photographer.html";
     const article = document.createElement("article");
 
     article.classList.add("article");
@@ -28,7 +28,7 @@ class PhotographerFactory {
     <a href="${baseUrl}?id=${this.id}" aria-label="voir le travail du photographe ${this.name}">
       <div class="face-box">
         <div class="box_img">
-          <img src="../../public/assets/photographers/${this.portrait}" loading="lazy" alt="photographe ${this.name}">
+          <img src="https://killouh.github.io/P6---Front-End-Fisheye/public/assets/photographers/${this.portrait}" loading="lazy" alt="photographe ${this.name}">
         </div>
         <h2 role="heading">${this.name}</h2>
       </div>
@@ -76,7 +76,7 @@ class PhotographerFactory {
       >${this.tagline}</div>
     </div>
     <div class="header__block-right">
-      <img class="photographer" loading="lazy" alt="" src="../../public/assets/photographers/${this.portrait}"> 
+      <img class="photographer" loading="lazy" alt="" src="https://killouh.github.io/P6---Front-End-Fisheye/public/assets/photographers/${this.portrait}"> 
     </div> 
     
     `;

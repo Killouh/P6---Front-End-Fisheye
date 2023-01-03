@@ -9,7 +9,7 @@ export class Image {
    * @returns {HTMLElement}
    */
   displayImage() {
-    const assets = "../../public/assets/images/";
+    const assets = "https://killouh.github.io/P6---Front-End-Fisheye/public/assets/images/";
     const onLb = document.querySelector("#lightbox");
 
     const div = document.createElement("div");
