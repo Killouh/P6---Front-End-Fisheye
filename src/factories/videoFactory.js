@@ -8,7 +8,7 @@ export class Video {
    * @returns {HTMLElement}
    */
   displayVideo() {
-    const assets = "../../public/assets/images/";
+    const assets = "https://killouh.github.io/P6---Front-End-Fisheye/public/assets/images/";
 
     const lightbox = document.querySelector("#lightbox");
     const div = document.createElement("div");
