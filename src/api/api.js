@@ -5,7 +5,6 @@ class Api {
    */
   constructor(url) {
     this.url = url;
-    //console.log(window.location.href);
   }
   async getData() {
     return fetch(this.url)

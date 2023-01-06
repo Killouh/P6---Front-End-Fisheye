@@ -187,7 +187,7 @@ class Photographer {
     
 
   
-
+  // Revoir code avec touche entrée sur les videos // corriger (control f)
   /**
    * @param {KeyboardEvent} evt
    */
@@ -203,7 +203,7 @@ class Photographer {
   getDataForLightbox(evt) {
     let currentId;
 
-    if (evt.key === "Enter") {
+    if (evt.key === "Enter") { 
       currentId = Number(evt.target.lastChild.firstChild.id);
     } else {
       currentId = Number(evt.target.id);
