@@ -1,5 +1,3 @@
-
-
 /**
  * calcul le nombre total de like
  * @param {array} datas d'un photographe

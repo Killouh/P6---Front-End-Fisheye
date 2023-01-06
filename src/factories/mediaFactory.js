@@ -97,7 +97,7 @@ class MediaFactory {
     para.classList.add("card_media--title");
     para.textContent = this.title;
 
-    containtSpan.classList.add("likes_container");
+    containtSpan.classList.add("likes_container", "likesEvent");
     containtSpan.setAttribute("tabindex", "0");
 
     mediaBox.classList.add("media-box");
