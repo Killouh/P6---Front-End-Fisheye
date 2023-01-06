@@ -1,8 +1,16 @@
+
+
 /**
  * calcul le nombre total de like
  * @param {array} datas d'un photographe
  * @returns number
  */
+export function getAllLike(datas) {
+  let initValue = 0; // indice
+  return datas.reduce((previous, current) => {
+    return previous + current.likes;
+  }, initValue);
+}
 /**
  * dispache l'évenement selon son type (souris / clavier)
  */
